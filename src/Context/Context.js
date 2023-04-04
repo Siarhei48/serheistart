@@ -1,10 +1,10 @@
 import React from 'react';
 
 function Context() {
-    return(
-<div>
-    <h2>Context</h2>
-</div>
+    return (
+        <div>
+            <h2>Context</h2>
+        </div>
     )
 }
 

@@ -1,10 +1,10 @@
 import React from 'react';
 
 function Lifecycle() {
-    return(
-<div>
-    <h2>Lifecycle</h2>
-</div>
+    return (
+        <div>
+            <h2>Lifecycle</h2>
+        </div>
     )
 }
 

@@ -1,10 +1,10 @@
 import React from 'react';
 
 function Events() {
-    return(
-<div>
-    <h2>Events</h2>
-</div>
+    return (
+        <div>
+            <h2>Events</h2>
+        </div>
     )
 }
 

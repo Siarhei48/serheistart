@@ -1,10 +1,10 @@
 import React from 'react';
 
 function UseEffect() {
-    return(
-<div>
-    <h2>UseEffect</h2>
-</div>
+    return (
+        <div>
+            <h2>UseEffect</h2>
+        </div>
     )
 }
 

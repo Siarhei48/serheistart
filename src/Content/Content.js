@@ -1,5 +1,5 @@
-import React from "react";
-import{BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import React from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Components from "../Components/Components";
 import Props from "../Props/Props";
 import State from "../State/State";
@@ -15,29 +15,33 @@ import RFragment from "../RFragment/RFragment";
 import RMemo from "../RMemo/RMemo";
 import Router1 from "../Router/Router";
 import UseEffect from "../UseEffect/UseEffect";
+import FuncComponents from '../Components/FuncComponents';
+import ClassComponents from '../Components/ClassComponents'
 
 function Content() {
+  let url = useLocation();
+console.log(`${url.pathname}/class`)
     return (
         <div className="content">
-             <Router >
-                <Routes >
-                    <Route exact path="/" element={<Components/>} />
-                    <Route exact path="/props" element={<Props/>} />
-                    <Route exact path="/state" element={<State/>} />
-                    <Route exact path="/lifecycle" element={<Lifecycle/>} />
-                    <Route exact path="/events" element={<Events/>} />
-                    <Route exact path="/key" element={<Key/>} />
-                    <Route exact path="/refs" element={<Refs/>} />
-                    <Route exact path="/async" element={<Async/>} />
-                    <Route exact path="/vdom" element={<VDOM/>} />
-                    <Route exact path="/rfragment" element={<RFragment/>} />
-                    <Route exact path="/rmemo" element={<RMemo/>} />
-                    <Route exact path="/useeffect" element={<UseEffect/>} />
-                    <Route exact path="/router" element={<Router1/>} />
-                    <Route exact path="/context" element={<Context/>} />
-                    <Route exact path="/forma" element={<Forma/>} />
-                </Routes>
-        </Router>
+        <Routes >
+          <Route path="components" element={<Components />} />
+                <Route  path={`/components/func`} element={< FuncComponents />} />
+                <Route  path={`${url.pathname}`} element={< ClassComponents />} />
+          <Route  path="/props" element={<Props />} />
+          <Route  path="/state" element={<State />} />
+          <Route  path="/lifecycle" element={<Lifecycle />} />
+          <Route  path="/events" element={<Events />} />
+          <Route  path="/key" element={<Key />} />
+          <Route  path="/refs" element={<Refs />} />
+          <Route  path="/async" element={<Async />} />
+          <Route  path="/vdom" element={<VDOM />} />
+          <Route  path="/rfragment" element={<RFragment />} />
+          <Route  path="/rmemo" element={<RMemo />} />
+          <Route  path="/useeffect" element={<UseEffect />} />
+          <Route  path="/router" element={<Router1 />} />
+          <Route  path="/context" element={<Context />} />
+          <Route  path="/forma" element={<Forma />} />
+        </Routes>
         </div>
     )
 }
