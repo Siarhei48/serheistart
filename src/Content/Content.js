@@ -20,13 +20,13 @@ import ClassComponents from '../Components/ClassComponents'
 
 function Content() {
   let url = useLocation();
-console.log(`${url.pathname}/class`)
+// console.log(`${url.pathname}/class`)
     return (
         <div className="content">
         <Routes >
           <Route path="components" element={<Components />} />
                 <Route  path={`/components/func`} element={< FuncComponents />} />
-                <Route  path={`${url.pathname}`} element={< ClassComponents />} />
+                <Route  path={`/components/class`} element={< ClassComponents />} />
           <Route  path="/props" element={<Props />} />
           <Route  path="/state" element={<State />} />
           <Route  path="/lifecycle" element={<Lifecycle />} />
