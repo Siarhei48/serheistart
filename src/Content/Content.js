@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Components from "../Components/Components";
 import Props from "../Props/Props";
 import State from "../State/State";
@@ -19,14 +19,13 @@ import FuncComponents from '../Components/FuncComponents';
 import ClassComponents from '../Components/ClassComponents'
 
 function Content() {
-  let url = useLocation();
-// console.log(`${url.pathname}/class`)
+
     return (
         <div className="content">
         <Routes >
           <Route path="components" element={<Components />} />
-                <Route  path={`/components/func`} element={< FuncComponents />} />
-                <Route  path={`/components/class`} element={< ClassComponents />} />
+            <Route  path={`components/func`} element={< FuncComponents />} />
+            <Route  path={`components/class`} element={< ClassComponents />} />
           <Route  path="/props" element={<Props />} />
           <Route  path="/state" element={<State />} />
           <Route  path="/lifecycle" element={<Lifecycle />} />
