@@ -1,11 +1,16 @@
 .App {
   text-align: center;
 }
-
+li{
+  margin-left: 15px;
+}
 h2 {
   text-align: center;
 }
 
+h3 {
+  text-align: center;
+}
 pre {
   display:block;
   margin: 1em 100px;
@@ -14,6 +19,10 @@ pre {
   border-radius: 10px;
   overflow: auto;
   font-size: 14px;
+}
+
+code{
+  margin-left: 5px;
 }
 
 .app-wrapper {
@@ -29,17 +38,22 @@ pre {
 
 .header {
   grid-area: h;
-  background-color: aqua
+  background-color: aqua;
+  border: 2px solid #BC7062;
+  border-bottom: 0cm;
 }
 
 .navbar {
   grid-area: n;
-  background-color: blanchedalmond
+  background-color: blanchedalmond;
+  border: 2px solid #BC7062;
+  border-right: 0;
 }
 
 .content {
   grid-area: c;
-  background-color:#DCF4C4
+  background-color:#DCF4C4;
+  border: 2px solid #BC7062;
 }
 
 

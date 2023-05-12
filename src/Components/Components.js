@@ -15,7 +15,7 @@ function Components() {
             
             <ul>
                 <li><Link to={`${url.pathname}/func`}>Function Components</Link></li>
-                <li><Link to={`${url.pathname}/class`}>Class Components</Link></li>
+                <li><Link to={`/components/class`}>Class Components</Link></li>
             </ul>
           
 
